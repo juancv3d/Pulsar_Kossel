@@ -815,16 +815,16 @@
 #endif
 
 // Print surface diameter/2 minus unreachable space (avoid collisions with vertical towers).
-#define DELTA_PRINTABLE_RADIUS 90.0 // (mm)
+#define DELTA_PRINTABLE_RADIUS 81.0 // (mm)
 
 // Maximum reachable area
-#define DELTA_MAX_RADIUS 90.0 // (mm)
+#define DELTA_MAX_RADIUS 81.0 // (mm)
 
 // Center-to-center distance of the holes in the diagonal push rods.
 #define DELTA_DIAGONAL_ROD 215.0 // (mm)
 
 // Distance between bed and nozzle Z home position
-#define DELTA_HEIGHT 250.00 // (mm) Get this value from G33 auto calibrate
+#define DELTA_HEIGHT 204.00 // (mm) Get this value from G33 auto calibrate
 
 #define DELTA_ENDSTOP_ADJ \
   {                       \
@@ -832,7 +832,7 @@
   } // Get these values from G33 auto calibrate
 
 // Horizontal distance bridged by diagonal push rods when effector is centered.
-#define DELTA_RADIUS 105.2 // (mm) Get this value from G33 auto calibrate
+#define DELTA_RADIUS 77.72 // (mm) Get this value from G33 auto calibrate
 
 // Trim adjustments for individual towers
 // tower angle corrections for X and Y tower / rotate XYZ so Z tower angle = 0
@@ -859,7 +859,7 @@
 // extra connectors. Leave undefined any used for non-endstop and non-probe purposes.
 //#define USE_XMIN_PLUG
 //#define USE_YMIN_PLUG
-#define USE_ZMIN_PLUG // a Z probe
+//#define USE_ZMIN_PLUG // a Z probe ------------------------
 //#define USE_IMIN_PLUG
 //#define USE_JMIN_PLUG
 //#define USE_KMIN_PLUG
