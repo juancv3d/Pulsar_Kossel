@@ -815,7 +815,7 @@
 #endif
 
 // Print surface diameter/2 minus unreachable space (avoid collisions with vertical towers).
-#define DELTA_PRINTABLE_RADIUS 81.0 // (mm)
+#define DELTA_PRINTABLE_RADIUS 79.0 // (mm)
 
 // Maximum reachable area
 #define DELTA_MAX_RADIUS 81.0 // (mm)
@@ -859,7 +859,7 @@
 // extra connectors. Leave undefined any used for non-endstop and non-probe purposes.
 //#define USE_XMIN_PLUG
 //#define USE_YMIN_PLUG
-//#define USE_ZMIN_PLUG // a Z probe ------------------------ esta desactivado mientras se instala el bltouch
+#define USE_ZMIN_PLUG // a Z probe ------------------------ esta desactivado mientras se instala el bltouch
 //#define USE_IMIN_PLUG
 //#define USE_JMIN_PLUG
 //#define USE_KMIN_PLUG
@@ -915,9 +915,9 @@
 #define I_MIN_ENDSTOP_INVERTING false       // Set to true to invert the logic of the endstop.
 #define J_MIN_ENDSTOP_INVERTING false       // Set to true to invert the logic of the endstop.
 #define K_MIN_ENDSTOP_INVERTING false       // Set to true to invert the logic of the endstop.
-#define X_MAX_ENDSTOP_INVERTING false       // Set to true to invert the logic of the endstop.
-#define Y_MAX_ENDSTOP_INVERTING false       // Set to true to invert the logic of the endstop.
-#define Z_MAX_ENDSTOP_INVERTING false       // Set to true to invert the logic of the endstop.
+#define X_MAX_ENDSTOP_INVERTING true        // Set to true to invert the logic of the endstop.
+#define Y_MAX_ENDSTOP_INVERTING true        // Set to true to invert the logic of the endstop.
+#define Z_MAX_ENDSTOP_INVERTING true        // Set to true to invert the logic of the endstop.
 #define I_MAX_ENDSTOP_INVERTING false       // Set to true to invert the logic of the endstop.
 #define J_MAX_ENDSTOP_INVERTING false       // Set to true to invert the logic of the endstop.
 #define K_MAX_ENDSTOP_INVERTING false       // Set to true to invert the logic of the endstop.
@@ -1137,7 +1137,7 @@
  * The probe replaces the Z-MIN endstop and is used for Z homing.
  * (Automatically enables USE_PROBE_FOR_Z_HOMING.)
  */
-//#define Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN---------------------activar cuando haya bltouch
+#define Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN
 
 // Force the use of the probe for Z-axis homing
 //#define USE_PROBE_FOR_Z_HOMING
@@ -1194,7 +1194,7 @@
 /**
  * The BLTouch probe uses a Hall effect sensor and emulates a servo.
  */
-//#define BLTOUCH
+#define BLTOUCH
 
 /**
  * Touch-MI Probe by hotends.fr
@@ -1246,7 +1246,7 @@
  * Allen key retractable z-probe as seen on many Kossel delta printers - https://reprap.org/wiki/Kossel#Automatic_bed_leveling_probe
  * Deploys by touching z-axis belt. Retracts by pushing the probe down. Uses Z_MIN_PIN.
  */
-#define Z_PROBE_ALLEN_KEY
+//#define Z_PROBE_ALLEN_KEY
 
 #if ENABLED(Z_PROBE_ALLEN_KEY)
 // 2 or 3 sets of coordinates for deploying and retracting the spring loaded touch probe on G29,
@@ -1706,7 +1706,7 @@
  *   With an LCD controller the process is guided step-by-step.
  */
 //#define AUTO_BED_LEVELING_3POINT
-//#define AUTO_BED_LEVELING_LINEAR
+#define AUTO_BED_LEVELING_LINEAR
 //#define AUTO_BED_LEVELING_BILINEAR
 //#define AUTO_BED_LEVELING_UBL
 //#define MESH_BED_LEVELING
